@@ -1,10 +1,19 @@
 :root {
-    --color-bgc: #000000;
-    --color-text: #ffffff;
+    --color-bgc: #283149;
+    --color-text: #dbedf3;
+    --color-text-sec: #404b69;
+    --color-warrning: #da0463;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-bgc);
+    color: var(--color-text);
+    font-family: ;
 }
