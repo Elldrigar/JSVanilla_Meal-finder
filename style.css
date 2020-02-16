@@ -75,3 +75,9 @@ input[type='text'] {
     border-radius: 0;
     border-radius: 5px;
 }
+
+@media (max-width: 500px) {
+    input[type="text"] {
+        width: 100%;
+    }
+}
