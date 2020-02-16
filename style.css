@@ -1,0 +1,10 @@
+:root {
+    --color-bgc: #000000;
+    --color-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
