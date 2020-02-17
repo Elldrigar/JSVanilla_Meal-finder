@@ -76,6 +76,16 @@ input[type='text'] {
     border-radius: 5px;
 }
 
+h2 {
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.textred {
+    color: var(--color-warrning);
+}
+
 @media (max-width: 500px) {
     input[type="text"] {
         width: 100%;
