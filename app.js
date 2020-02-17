@@ -1,9 +1,9 @@
 const search = document.getElementById('search'),
     submit = document.getElementById('submit'),
     random = document.getElementById('random'),
-    meals = document.getElementById('meals'),
-    resultHeading = document.getElementById('result-heading'),
-    single_meal = document.getElementById('single-meal');
+    meals = document.querySelector('.meals'),
+    resultHeading = document.querySelector('.result-heading'),
+    single_meal = document.querySelector('.single-meal');
 
 function searchMeal(event) {
     event.preventDefault()
@@ -18,6 +18,7 @@ function searchMeal(event) {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                resultHeading.innerHTML = `<h2>Search result for ${term}:</h2>`;
             })
     } else {
         alert('Please enter a search term!');
