@@ -18,7 +18,11 @@ function searchMeal(event) {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                resultHeading.innerHTML = `<h2>Search result for ${term}:</h2>`;
+                resultHeading.innerHTML = `<h2>Search result for '<span class="textred">${term}</span>':</h2>`;
+
+                if (data.meals === null) {
+                    resultHeading.innerHTML = `<h2>Sorry! '<span class="textred">${term}</span>' not found. Try again.</h2>`
+                }
             })
     } else {
         alert('Please enter a search term!');
