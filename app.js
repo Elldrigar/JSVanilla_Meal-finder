@@ -30,7 +30,7 @@ function searchMeal(event) {
                             <h3>${meal.strMeal}</h3>
                         </div>
                     </div>
-                    `).join('')
+                    `).join()
                 }
             })
     } else {
