@@ -22,6 +22,16 @@ function searchMeal(event) {
 
                 if (data.meals === null) {
                     resultHeading.innerHTML = `<h2>Sorry! '<span class="textred">${term}</span>' not found. Try again.</h2>`
+                } else {
+                    meals.innerHTML = data.meals.map(meal => `
+                    <div class="meal">
+                        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+                        <div class="meal-info" data-mealID="${meal.idMeal}">
+                            <h3>${meal.strMeal}</h3>
+                        </div>
+                    </div>
+                    `)
+                        .join('')
                 }
             })
     } else {
