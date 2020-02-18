@@ -41,7 +41,6 @@ function searchMeal(event) {
 function clearAll() {
     search.value = '';
     single_meal.innerHTML = '';
-    meals.innerHTML = '';
     resultHeading.innerHTML = '';
 }
 
@@ -62,6 +61,8 @@ function getMealById(mealID) {
 //FETCH RANDOM MEAL FROM API
 
 function getRandomMeal() {
+    meals.innerHTML = '';
+    clearAll();
 
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then(res => res.json())
