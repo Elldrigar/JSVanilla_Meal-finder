@@ -142,7 +142,7 @@ h3 {
 }
 
 .single-meal img {
-    width: 400px;
+    width: 300px;
     margin: 15px;
     border-radius: 4px;
 }
@@ -181,7 +181,42 @@ h3 {
     font-weight: 300;
 }
 
+@media (max-width: 800px) {
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meal {
+        height: 200px;
+        width: 200px;
+    }
+}
+
 @media (max-width: 500px) {
+    .meals {
+        grid-template-columns: 1fr;
+    }
+
+    .meal {
+        height: 300px;
+        width: 300px;
+    }
+
+    .single-meal {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .single-meal img {
+        margin: 0;
+    }
+
     input[type="text"] {
         width: 100%;
     }
