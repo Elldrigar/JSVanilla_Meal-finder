@@ -36,7 +36,34 @@ function searchMeal(event) {
     } else {
         alert('Please enter a search term!');
     }
+};
+
+//FETCH MEALI BY ID
+
+function getMealById(mealID) {
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
 }
 
 //EVENT LISTENERS
 submit.addEventListener('submit', searchMeal);
+
+meals.addEventListener('click', event => {
+    const mealInfo = event.path.find(item => {
+        if (item.classList) {
+            return item.classList.contains('meal-info');
+        } else {
+            return false;
+        }
+    });
+    // console.log(mealInfo)
+
+    if (mealInfo) {
+        const mealID = mealInfo.getAttribute('data-mealid');
+        getMealById(mealID);
+    }
+});
